@@ -1,0 +1,12 @@
+SELECT * FROM public.yellow_taxi_trips
+LIMIT 100
+
+# To get the number of row for January 15
+SELECT 
+	COUNT(tpep_pickup_datetime) 
+FROM 
+	public.yellow_taxi_trips 
+WHERE 
+	tpep_pickup_datetime::date = '2021-01-15%';
+
+    
